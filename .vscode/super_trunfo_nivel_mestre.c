@@ -5,7 +5,7 @@ int main(){
     //Declaração de variáveis: Carta 1
 
     //Declaração de variáveis tipo char 
-    char estado1, codigo1[4], cidade1[20];
+    char estado1, codigo1[20], cidade1[20];
 
     //Declaração de variáveis tipo int 
     int pontoturistico1;
@@ -20,7 +20,7 @@ int main(){
     //Declaração de variáveis: Carta 2
     
     //Declaração de variáveis tipo char
-    char estado2, codigo2[4], cidade2[20];
+    char estado2, codigo2[20], cidade2[20];
 
     //Declaração de variáveis tipo int 
     int pontoturistico2;
@@ -50,7 +50,7 @@ int main(){
     scanf("%s", cidade1);
 
     printf("Insira o valor da População da Cidade: \n");
-    scanf("%d", &populacao1);
+    scanf("%lu", &populacao1);
 
     printf("Insira a Área em Quilômetros Quadrados da Cidade: \n");
     scanf("%f", &areakm1);
@@ -79,7 +79,7 @@ int main(){
     scanf("%s", cidade2);
 
     printf("Insira o valor da População da Cidade: \n");
-    scanf("%d", &populacao2);
+    scanf("%lu", &populacao2);
 
     printf("Insira a Área em Quilômetros Quadrados da Cidade: \n");
     scanf("%f", &areakm2);
@@ -98,7 +98,7 @@ int main(){
         densidadepopulacional1 = (float) populacao1 / areakm1;
 
         //Cálculo de PIB per Capita
-        pibpercapita1 = (double) pib1 / populacao1;
+        pibpercapita1 = (float) pib1 / populacao1;
 
 
         //Cálculos: Carta 2
@@ -107,7 +107,7 @@ int main(){
         densidadepopulacional2 = (float) populacao2 / areakm2;
 
         //Cálculo de PIB per Capita
-        pibpercapita2 = (double) pib2 / populacao2;
+        pibpercapita2 = (float) pib2 / populacao2;
 
         //Cálculo Super Poder Carta 1
         superpoder1 = (float) populacao1 + areakm1 + pib1 + pontoturistico1 + pibpercapita1 + 
