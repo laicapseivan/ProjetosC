@@ -43,6 +43,8 @@ int main(){
     int comparacaopibpercapita;
     int comparacaosuperpoder; 
 
+    int escolhajogador;
+
 
 
 
@@ -134,7 +136,7 @@ int main(){
     printf("Estado: %c \n", estado1);
     printf("Código: %s \n", codigo1);
     printf("Nome da Cidade: %s \n", cidade1);
-    printf("População: %d \n", populacao1);
+    printf("População: %lu \n", populacao1);
     printf("Área: %.2f km² \n", areakm1);
     printf("PIB: %.2f reais \n", pib1);
     printf("Números de Pontos Turísticos: %d \n", pontoturistico1);
@@ -148,7 +150,7 @@ int main(){
     printf("Estado: %c \n", estado2);
     printf("Código: %s \n", codigo2);
     printf("Nome da Cidade: %s \n", cidade2);
-    printf("População: %d \n", populacao2);
+    printf("População: %lu \n", populacao2);
     printf("Área: %.2f km² \n", areakm2);
     printf("PIB: %.2f reais \n", pib2);
     printf("Números de Pontos Turísticos: %d \n", pontoturistico2);
@@ -159,10 +161,21 @@ int main(){
 
     //Utilização de If-else para revelar carta vencedora de cada atributo:
 
-    printf("Carta Vencedora de Cada Atributo:\n");
+    printf("Escolha Um Atributo para Comparar:\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turísticos\n");
+    printf("5. Densidade Populacional\n");
+    printf("6. PIB per Capita\n");
+    scanf("%d", &escolhajogador);
+
 
     printf("\n");
 
+    switch (escolhajogador)
+    {
+    case 1:
     if (populacao1 > populacao2)
     {
         comparacaopopulacao = 1;
@@ -176,8 +189,10 @@ int main(){
         comparacaopopulacao = 0;
         printf("População: Empatou\n");
     }
+    break;
 
-  if (areakm1 > areakm2)
+    case 2:
+    if (areakm1 > areakm2)
     {
         comparacaoarea = 1;
         printf("Área Vencedora: Carta 1\n");
@@ -190,9 +205,10 @@ int main(){
         comparacaoarea = 0;
         printf("Área: Empatou\n");
     }
+    break;
 
-    
- if (pib1 > pib2)
+    case 3:
+    if (pib1 > pib2)
     {
         comparacaopib = 1;
         printf("PIB Vencedor: Carta 1\n");
@@ -205,9 +221,10 @@ int main(){
         comparacaopib = 0;
         printf("PIB: Empatou\n");
     }
+    break;
 
-
-     if (pontoturistico1 > pontoturistico2)
+    case 4:
+    if (pontoturistico1 > pontoturistico2)
     {
         comparacaopontoturistico = 1;
         printf("Pontos Turísticos Vencedor: Carta 1\n");
@@ -220,8 +237,9 @@ int main(){
         comparacaopontoturistico = 0;
         printf("Pontos Turísticos: Empatou\n");
     }
+    break;
 
-
+    case 5:
     if (densidadepopulacional1 < densidadepopulacional2)
     {
         comparacaodensidadepopulacional = 1;
@@ -235,9 +253,10 @@ int main(){
         comparacaodensidadepopulacional = 0;
         printf("Densidade Populacional: Empatou\n");
     }
+    break;
 
-
-     if (pibpercapita1 > pibpercapita2)
+    case 6:
+    if (pibpercapita1 > pibpercapita2)
     {
         comparacaopibpercapita = 1;
         printf("PIB per Capita Vencedor: Carta 1\n");
@@ -250,6 +269,13 @@ int main(){
         comparacaopibpercapita = 0;
         printf("PIB per Capita: Empatou\n");
     }
+    break;
+
+    default:
+        printf("Valor Inválido\n");
+    }
+
+    /*
 
     if (superpoder1 > superpoder2)
     {
@@ -264,6 +290,7 @@ int main(){
         comparacaosuperpoder = 0;
         printf("Super Poder: Empatou\n");
     }
+    
 
     cartavencedora = comparacaopopulacao + comparacaoarea + comparacaopib + comparacaopontoturistico 
                    + comparacaodensidadepopulacional + comparacaopibpercapita + comparacaosuperpoder;
@@ -285,6 +312,7 @@ int main(){
 
     printf("\n");
 
+    */
 
     return 0;
 
